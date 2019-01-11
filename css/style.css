@@ -8,3 +8,6 @@ html{font-family:'Noto Sans KR',sans-serif;color:#222222;
     /* Support for all WebKit browsers. */-webkit-font-smoothing:antialiased;
     /* Support for Safari and Chrome. */text-rendering:optimizeLegibility;
     /* Support for Firefox. */-moz-osx-font-smoothing:grayscale;}
+
+/* index */
+#splash{display:none;}
