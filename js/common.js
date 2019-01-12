@@ -17,3 +17,12 @@ $(document).on('click', 'a[href="#"]', function(e){
 //         $('#login').hide();
 //     });
 // });
+//모바일 사이드 내비 동작
+$(function(){
+    $('.menu_btn').on('click', function(){
+        $('.nav_wrapper').animate({'left': '0px'}, 300).addClass('on');
+        $('.fold a').on('click', function(){
+            $('.nav_wrapper').animate({'left': '-200vw'}, 300).removeClass('on');
+        });
+    });
+});
