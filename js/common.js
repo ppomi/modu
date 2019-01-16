@@ -12,8 +12,9 @@ $(function(){
 });
 //로그인 통과
 $(function(){
-    $('#get_start').on('click', function(){
-        $(location).attr('href', 'mobile.html');
+    $('#get_start').on('click', function(e){
+        e.preventDefault();
+        $(location).attr('href', 'https://ppomi.github.io/modu/mobile.html');
     });
 });
 //모바일 사이드 내비 동작

@@ -40,14 +40,14 @@ header .gnb .nav_wrapper .menus li:nth-child(7) a::before{content:url(../img/com
 
 /* index */
 
-#splash{display:none;position:absolute;top:0;left:0;width:100vw;height:100vh;background:#6077e7;z-index:100;}
+#splash{position:absolute;top:0;left:0;width:100vw;height:100vh;background:#6077e7;z-index:100;}
 #splash .logo{width:40vw;height:10vh;max-width:233px;max-height:88px;background:url(../img/common/modu_logo.jpg) no-repeat center center;background-size:contain;margin:25vh auto;}
 #splash .car_wrapper{width:100vw;height:auto;overflow:hidden;}
 #splash .car_wrapper .car{width:100vw;height:81px;margin-left:-86px;}
 #splash .car_wrapper .road{width:100vw;height:5px;background:#000000;}
 #splash .car_wrapper .car img{margin:0 auto;position:relative;animation:drive 5s infinite;animation-timing-function:linear;}
 @keyframes drive{0%{margin-left:-400%;}10%{margin-left:-150%;}20%{margin-left:-50%;}30%{margin-left:50%;}40%{margin-left:50%;}50%{margin-left:50%;}100%{margin-left:200%;}}
-#login{display:none;position:absolute;top:0;left:0;width:100vw;height:100vh;background:#6077e7;z-index:90;}
+#login{position:absolute;top:0;left:0;width:100vw;height:100vh;background:#6077e7;z-index:90;}
 #login .login_info{width:100vw;height:45vh;background:#ffffff;position:relative;}
 #login .login_info img{width:initial;max-width:initial;position:absolute;}
 #login .login_info img:nth-child(1){top:20vw;left:50%;margin-left:-96px;}

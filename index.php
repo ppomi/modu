@@ -25,43 +25,43 @@ if(isMobile()){
     </head>
 
     <body>
-        <!-- Start of splash -->
-        <div id="splash" class="mobile">
-            <div class="logo"></div>
-            <div class="car_wrapper">
-                <div class="car">
-                    <img src="img/common/splash_car.jpg" alt="모두의 셔틀">
-                </div>
-                <div class="road"></div>
+    <!-- Start of splash -->
+    <div id="splash" class="mobile">
+        <div class="logo"></div>
+        <div class="car_wrapper">
+            <div class="car">
+                <img src="img/common/splash_car.jpg" alt="모두의 셔틀">
             </div>
+            <div class="road"></div>
         </div>
-        <!-- End of splash -->
+    </div>
+    <!-- End of splash -->
 
-        <!-- Start of Login -->
-        <div id="login">
-            <div class="login_info">
-                <img src="img/common/login_text.jpg" alt="꿀잠 출근라이프로 여러분을 모셔드립니다!">
-                <img src="img/common/login_car.jpg" alt="모두의 셔틀">
+    <!-- Start of Login -->
+    <div id="login">
+        <div class="login_info">
+            <img src="img/common/login_text.jpg" alt="꿀잠 출근라이프로 여러분을 모셔드립니다!">
+            <img src="img/common/login_car.jpg" alt="모두의 셔틀">
+        </div>
+        <div class="login_wrapper">
+            <div class="login_form">
+                <form action="get" class="clear_fix">
+                    <label for="id" class="text_hide">아이디(메일주소)</label>
+                    <input type="text" name="id" id="id" placeholder="username@mail.com">
+                    <label for="password" class="text_hide">비밀번호</label>
+                    <input type="password" name="password" id="password" placeholder="password">
+                    <button type="submit" id="get_start">GET STARTED</button>
+                </form>
             </div>
-            <div class="login_wrapper">
-                <div class="login_form">
-                    <form action="get" class="clear_fix">
-                        <label for="id" class="text_hide">아이디(메일주소)</label>
-                        <input type="text" name="id" id="id" placeholder="username@mail.com">
-                        <label for="password" class="text_hide">비밀번호</label>
-                        <input type="password" name="password" id="password" placeholder="password">
-                        <button type="submit" id="get_start">GET STARTED</button>
-                    </form>
-                </div>
-                <div class="sns_login">
-                    <p>with signup</p>
-                    <a href="#" class="sns_login_btn kakao text_hide">카카오</a>
-                    <a href="#" class="sns_login_btn facebook text_hide">페이스북</a>
-                    <a href="#" class="sns_login_btn google text_hide">구글</a>
-                </div>
+            <div class="sns_login">
+                <p>with signup</p>
+                <a href="#" class="sns_login_btn kakao text_hide">카카오</a>
+                <a href="#" class="sns_login_btn facebook text_hide">페이스북</a>
+                <a href="#" class="sns_login_btn google text_hide">구글</a>
             </div>
         </div>
-        <!-- End of Login -->
+    </div>
+    <!-- End of Login -->
     </body>
 
     </html>
