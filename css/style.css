@@ -8,7 +8,20 @@ html{font-family:'Noto Sans KR',sans-serif;color:#222222;
     /* Support for all WebKit browsers. */-webkit-font-smoothing:antialiased;
     /* Support for Safari and Chrome. */text-rendering:optimizeLegibility;
     /* Support for Firefox. */-moz-osx-font-smoothing:grayscale;}
-.mobile{display:none;}
 
-/* index */
-#splash{display:none;}
+/* pc */
+header{position:relative;}
+.gnb{width:100%;height:70px;background-image:linear-gradient(to right,#6077e7,#4447b2);overflow:auto;}
+#logo{width:230px;height:50px;margin:10px;background:url('../img/common/modu_logo.jpg') no-repeat center center;background-size:contain;cursor:pointer;float:left;}
+#logo a{display:block;width:100%;height:100%;}
+.gnb .util_wrapper{width:970px;height:100%;float:right;}
+.gnb .util_wrapper .notification{width:70px;height:100%;position:relative;float:left;}
+.gnb .util_wrapper .notification .numbers{width:30px;height:30px;position:absolute;top:0;right:0;}
+.snb .util_wrapper .notification .mail_box{width:70px;height:100%;}
+.gnb .util_wrapper .member_info{width:200px;height:100%;float:left;}
+.gnb .util_wrapper .member_info .member_photo{width:60px;height:60px;float:left;}
+.gnb .util_wrapper .member_info .member_id{width:100px;height:100%;line-height:70px;font-size:18px;font-weight:700;float:left;}
+.gnb .util_wrapper .member_info .member_out{width:40px;height:100%;line-height:40px;float:left;}
+.gnb .util_wrapper .out_link{width:200px;height:100%;float:left;}
+.gnb .util_wrapper .out_link a{display:block;width:200px;height:100%;font-size:16px;line-height:70px;float:left;}
+.side_nav{position:absolute;top:70px;left:0;width:230px;height:100%;background:#c9ecfc;}
