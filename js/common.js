@@ -26,6 +26,19 @@ $(function(){
         });
     });
 });
+//모바일 랜덤 숫자
+$(function(){
+    function numRandom(min, max){
+        var numb = Math.floor(Math.random()*(max-min+1)) + min;
+        return numb;
+    }
+    var minute = numRandom(0, 20);
+    var second = numRandom(0, 59);
+    var bus_stop = numRandom(1, 10);
+    $('.bus_minute').text(minute);
+    $('.bus_second').text(second);
+    $('.bus_stop_number').text(bus_stop);
+});
 //모바일 탭 동작
 $(function(){
     $('.mode_wrapper a').on('click', function(){
