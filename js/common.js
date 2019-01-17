@@ -26,3 +26,14 @@ $(function(){
         });
     });
 });
+//pc gnb동작
+$(function(){
+    $('.gnb_btn a').on('click', function(){
+        $(this).toggleClass('fold');
+        $('.gnb').toggleClass('off');
+        $('#main').toggleClass('wide');
+    });
+    $('.gnb>ul>li>a').on('click', function(){
+        $(this).toggleClass('on');
+    });
+});
