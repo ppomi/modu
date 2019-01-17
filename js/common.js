@@ -26,6 +26,19 @@ $(function(){
         });
     });
 });
+//모바일 탭 동작
+$(function(){
+    $('.mode_wrapper a').on('click', function(){
+        $('.mode_wrapper a').removeClass('on');
+        $(this).addClass('on');
+    });
+});
+//모바일 하트 동작
+$(function(){
+    $('.card_top a').on('click', function(){
+        $(this).toggleClass('on');
+    });
+});
 //pc gnb동작
 $(function(){
     $('.gnb_btn a').on('click', function(){

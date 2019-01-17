@@ -140,16 +140,25 @@ main.road_wrapper{background:#ffffff;}
 .road_wrapper .mode_wrapper a{display:block;width:30vw;height:6vh;line-height:6vh;border:1px solid transparent;box-sizing:border-box;float:left;color:#ffffff;font-size:2vh;text-align:center;border-radius:3vh;}
 .road_wrapper .mode_wrapper a.on{border:1px solid #6077e7;background:#ffffff;color:#6077e7;}
 .road_wrapper .lines_wrapper{width:auto;height:auto;margin-top:10vh;box-shadow:none;}
-.road_wrapper .lines_wrapper .line_card{width:50vw;height:60vh;padding:0 2vw;box-sizing:border-box;}
+.road_wrapper .lines_wrapper .line_card{width:50vw;height:60vh;padding:0 2vw;box-sizing:border-box;float:left;}
+.road_wrapper .lines_wrapper .line_card.off{opacity:0.6;transform:scale(0.7);}
+.road_wrapper .lines_wrapper .line_card.off .card_top{opacity:0;}
 .road_wrapper .lines_wrapper .line_card .card_top{width:100%;height:15vh;}
 .road_wrapper .lines_wrapper .line_card .card_top .line_name{display:inline-block;font-size:3.5vh;font-weight:700;}
 .road_wrapper .lines_wrapper .line_card .card_top .line_time{font-size:2vh;line-height:5vh;color:#888888;}
 .road_wrapper .lines_wrapper .line_card .card_top .mind{display:inline-block;width:5vw;height:5vh;background:url(../img/common/heart_btn.png) no-repeat center bottom;background-size:contain;margin-left:2vw;}
-.road_wrapper .lines_wrapper .line_card .card_content{width:100%;height:40vh;position:relative;border-radius:5vw;box-shadow: 0px 2px 10px rgba(0,0,0,0.3);}
-.road_wrapper .lines_wrapper .line_card .card_content .card_bg{width:100%;height:20vh;background:url(../img/html/we_yeo_line.jpg) no-repeat center center;background-size:cover;border-radius:5vw 5vw 0 0;}
+.road_wrapper .lines_wrapper .line_card .card_top .mind.on{background:url(../img/common/heart_on_btn.png) no-repeat center bottom;background-size:contain;}
+.road_wrapper .lines_wrapper .line_card .card_content{width:100%;height:40vh;position:relative;border-radius:5vw;box-shadow: 0px 10px 30px rgba(0,0,0,0.3);}
+.road_wrapper .lines_wrapper .line_card:nth-child(1) .card_content .card_bg{background:url(../img/html/il_sang_line.jpg) no-repeat center center;}
+.road_wrapper .lines_wrapper .line_card:nth-child(2) .card_content .card_bg{background:url(../img/html/we_yeo_line.jpg) no-repeat center center;}
+.road_wrapper .lines_wrapper .line_card:nth-child(3) .card_content .card_bg{background:url(../img/html/bun_gang_line.jpg) no-repeat center center;}
+.road_wrapper .lines_wrapper .line_card .card_content .card_bg{width:100%;height:20vh;background-size:cover;border-radius:5vw 5vw 0 0;}
 .road_wrapper .lines_wrapper .line_card .card_content .card_price{position:absolute;top:18vh;left:50%;margin-left:-15vw;width:30vw;height:4vh;font-size:1vh;line-height:4vh;color:#000000;text-align:center;background:#f8d41e;border-radius:2vh;}
 .road_wrapper .lines_wrapper .line_card .card_content .card_price span{font-size:2.5vh;font-weight:700;}
 .road_wrapper .lines_wrapper .line_card .card_content .card_info{padding:4vh 3vw 0 3vw;font-size:1vh;text-align:center;}
 .road_wrapper .lines_wrapper .line_card .card_content .card_info .distance{font-size:2vh;font-weight:700;}
+.road_wrapper .lines_wrapper .line_card .card_content .card_info .stars{width:140px;height:24px;margin:auto;margin-top:10px;}
+.road_wrapper .lines_wrapper .line_card .card_content .card_info .stars span{display:inline-block;width:24px;height:24px;background:url(../img/common/star.png) no-repeat center center;}
+.road_wrapper .lines_wrapper .line_card .card_content .card_info .stars span.on{background:url(../img/common/star_on.png) no-repeat center center;}
 .road_wrapper .search_btn{position:fixed;bottom:5vh;right:8vw;width:50px;height:50px;background:#6077e7;border-radius:30px;box-sizing:border-box;box-shadow: 0px 2px 10px rgba(0,0,0,0.3);}
 .road_wrapper .search_btn a{display:block;width:100%;height:100%;background:url(../img/common/search_btn.png) no-repeat center center;background-size:50%;}
