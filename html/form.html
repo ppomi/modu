@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="포트폴리오로 모두의셔틀 리뉴얼을 진행하였습니다">
+    <meta name="keywords" content="공유경제, 모두의셔틀">
+    <meta name="author" content="@imppomi">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>폼 | 모두의셔틀 관리자페이지</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="../lib/jquery-1.12.4.min.js"></script>
+    <script src="../lib/prefixfree.min.js"></script>
+    <script src="../js/common.js"></script>
+
+    <!--[if lt IE 9]>	
+		<script src="lib/html5shiv.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="#main" class="text_hide fixed">본문 바로가기</a>
+        <!-- start of header -->
+        <header>
+            <nav class="header clear_fix">
+                <h1 id="logo"><a href="../pc.html" class="text_hide">모두의셔틀 로고</a></h1>
+                <div class="gnb_btn"><a href="#"><i class="fa fa-angle-left"></i></a></div>
+                <div class="util_wrapper clear_fix">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="numbers">5</div>
+                            <div class="mail_box"></div>
+                        </a>
+                    </div>
+                    <div class="member_info clear_fix">
+                        <div class="member_photo text_hide">DA KIM님의 사진</div>                        
+                        <div class="member_id">DA KIM</div>
+                        <div class="member_out"><a href="#">로그아웃<i class="fa fa-sign-out"></i></a></div>
+                    </div>
+                    <div class="out_link">
+                        <a href="#">모두의셔틀 바로가기<i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End of header -->
+
+        <nav class="gnb">
+            <ul>
+                <li><a href="#" class="clear_fix"><i class="fa fa-bar-chart"></i>대시보드<i class="fa fa-caret-down"></i></a>
+                    <ul class="sub_menu">
+                        <li><a href="#">일간</a></li>
+                        <li><a href="#">주간</a></li>
+                        <li><a href="#">월간</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="clear_fix"><i class="fa fa-user-circle-o"></i>회원관리<i class="fa fa-caret-down"></i></a>
+                    <ul class="sub_menu">
+                        <li><a href="#">전체회원</a></li>
+                        <li><a href="#">휴면회원</a></li>
+                        <li><a href="#">탈퇴회원</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="clear_fix"><i class="fa fa-credit-card-alt"></i>결제관리<i class="fa fa-caret-down"></i></a>
+                    <ul class="sub_menu">
+                        <li><a href="#">전체결제</a></li>
+                        <li><a href="#">결제취소</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="on clear_fix"><i class="fa fa-paint-brush"></i>디자인설정<i class="fa fa-caret-down"></i></a>
+                    <ul class="sub_menu">
+                        <li><a href="layout.html">레이아웃</a></li>
+                        <li><a href="button.html">버튼</a></li>
+                        <li><a href="form.html" class="on">폼</a></li>
+                        <li><a href="list_view.html">리스트뷰</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-cog"></i>설정</a></li>
+            </ul>
+        </nav>
+
+        <!-- Start of content -->
+        <main id="main">
+            <div class="main_wrapper">
+                <div class="layout column_1 clear_fix">
+                    <h3>기본 폼</h3>
+                    <table class="form">
+                        <tbody>
+                            <tr>
+                                <td class="label">
+                                    <label for="id">
+                                        아이디
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="id" id="id" placeholder="아이디를 입력하세요">
+                                    <a href="#" class="btn small blue">중복확인</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="pass">
+                                        비밀번호
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="password" name="pass" id="pass">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="mail">
+                                        이메일 주소
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="mail" id="mail" placeholder="abc123@abc.com">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="title">
+                                        제목
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="title" id="title" class="wide">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="zipcode">
+                                        주소
+                                    </label>
+                                </td>
+                                <td>
+                                    <p>
+                                        <input type="text" name="zipcode" id="zipcode" class="number" maxlength="5" title="우편번호">
+                                        <a href="#" class="btn palepurple">우편번호검색</a>
+                                    </p>
+                                    <p>
+                                        <input type="text" name="addr1" id="addr1" class="half" title="기본주소">
+                                        <input type="text" name="addr2" id="addr2" class="half" title="상세주소">
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="phone">
+                                        휴대전화번호
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="text" name="phone" id="phone" maxlength="11" placeholder="-없이 숫자만 입력해주세요">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="class">
+                                        회원구분
+                                    </label>
+                                </td>
+                                <td>
+                                    <select name="class" id="class">
+                                        <option value="none">회원구분</option>
+                                        <option value="normal">일반회원</option>
+                                        <option value="shuttle">기사회원</option>
+                                        <option value="admin">관리자</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="greet">
+                                        가입인사
+                                    </label>
+                                </td>
+                                <td>
+                                    <textarea name="greet" id="greet"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="inter">
+                                        관심분야
+                                    </label>
+                                </td>
+                                <td>
+                                    <label for="sports">스포츠</label>
+                                    <input type="checkbox" name="inter" id="sports" value="sports">
+                                    <label for="movie">영화</label>
+                                    <input type="checkbox" name="inter" id="movie" value="movie">
+                                    <label for="travel">여행</label>
+                                    <input type="checkbox" name="inter" id="travel" value="travel">
+                                    <label for="shopping">쇼핑</label>
+                                    <input type="checkbox" name="inter" id="shopping" value="shopping">
+                                    <label for="reading">독서</label>
+                                    <input type="checkbox" name="inter" id="reading" value="reading">
+                                    <label for="tv">TV</label>
+                                    <input type="checkbox" name="inter" id="tv" value="tv">
+                                    <label for="cook">요리</label>
+                                    <input type="checkbox" name="inter" id="cook" value="cook">
+                                    <label for="music">음악</label>
+                                    <input type="checkbox" name="inter" id="music" value="music">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="sex">
+                                        성별
+                                    </label>
+                                </td>
+                                <td>
+                                    <label for="male">남성</label>
+                                    <input type="radio" name="sex" id="male" value="m">
+                                    <label for="female">여성</label>
+                                    <input type="radio" name="sex" id="female" value="f">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="reserv">
+                                        예약일시
+                                    </label>
+                                </td>
+                                <td>
+                                    <input type="date" name="reserv" id="reserv">
+                                    <select name="hour" id="hour">
+                                        <option value="00">00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                    </select>
+                                    시
+                                    <select name="minute" id="minute">
+                                        <option value="00">00</option>
+                                        <option value="01">01</option>
+                                        <option value="02">02</option>
+                                        <option value="03">03</option>
+                                        <option value="04">04</option>
+                                        <option value="05">05</option>
+                                        <option value="06">06</option>
+                                        <option value="07">07</option>
+                                        <option value="08">08</option>
+                                        <option value="09">09</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                        <option value="32">32</option>
+                                        <option value="33">33</option>
+                                        <option value="34">34</option>
+                                        <option value="35">35</option>
+                                        <option value="36">36</option>
+                                        <option value="37">37</option>
+                                        <option value="38">38</option>
+                                        <option value="39">39</option>
+                                        <option value="40">40</option>
+                                        <option value="41">41</option>
+                                        <option value="42">42</option>
+                                        <option value="43">43</option>
+                                        <option value="44">44</option>
+                                        <option value="45">45</option>
+                                        <option value="46">46</option>
+                                        <option value="47">47</option>
+                                        <option value="48">48</option>
+                                        <option value="49">49</option>
+                                        <option value="50">50</option>
+                                        <option value="51">51</option>
+                                        <option value="52">52</option>
+                                        <option value="53">53</option>
+                                        <option value="54">54</option>
+                                        <option value="55">55</option>
+                                        <option value="56">56</option>
+                                        <option value="57">57</option>
+                                        <option value="58">58</option>
+                                        <option value="59">59</option>
+                                    </select>
+                                    분
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="image">
+                                        대표이미지
+                                    </label>
+                                </td>
+                                <td>
+                                    <ul class="image_wrapper clear_fix">
+                                        <li class="no_image">
+                                            <div class="image"></div>
+                                            <div class="info">
+                                                <i class="fa fa-exclamation-triangle"></i>이미지가 없습니다.
+                                            </div>
+                                        </li>
+                                        <li class="upload_image">
+                                            <div class="image">
+                                                <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+                                            </div>
+                                            <div class="info">
+                                                <i class="fa fa-spinner fa-pulse"></i>업로드중
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="image">
+                                                <a href="#" class="down text_hide">다운로드</a>
+                                                <img src="../img/html/sample_image.jpg" alt="업로드한 이미지">
+                                            </div>
+                                            <div class="info">
+                                                <i class="fa fa-file-image-o"></i>sample_image.jpg
+                                                <span>0.2 mb</span>
+                                                <a href="#" class="del text_hide">삭제하기</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <input type="file" name="image_file" id="image_file" multiple="multiple">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="label">
+                                    <label for="file">
+                                        파일첨부
+                                    </label>
+                                </td>
+                                <td>
+                                    <ul class="file_wrapper">
+                                        <li class="no_file">
+                                            <p class="file">
+                                                <i class="fa fa-exclamation-triangle"></i>파일이 없습니다.
+                                            </p>
+                                        </li>
+                                        <li class="upload_file">
+                                            <p class="file">
+                                                <i class="fa fa-spinner fa-pulse"></i>업로드중
+                                            </p>
+                                        </li>
+                                        <li>
+                                            <p class="file">
+                                                <a href="#">
+                                                    <i class="fa fa-file-o"></i>샘플문서.doc
+                                                </a>
+                                                <span>0.1 mb</span>
+                                                <a href="#" class="del text_hide">삭제하기</a>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                    <input type="file" name="image_file" id="image_file" multiple="multiple">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>              
+            </div>
+        </main>
+        <!-- End of content -->
+
+        <!-- Start of footer -->
+        <footer>
+            <p>모두의셔틀 관리자페이지</p>
+            <p>본 페이지는 포트폴리오용으로 제작되었습니다.</p>
+        </footer>
+        <!-- End of footer -->
+    </div>
+</body>
+
+</html>

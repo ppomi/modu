@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="포트폴리오로 모두의셔틀 리뉴얼을 진행하였습니다">
+    <meta name="keywords" content="공유경제, 모두의셔틀">
+    <meta name="author" content="@imppomi">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>버튼 | 모두의셔틀 관리자페이지</title>
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="../lib/jquery-1.12.4.min.js"></script>
+    <script src="../lib/prefixfree.min.js"></script>
+    <script src="../js/common.js"></script>
+
+    <!--[if lt IE 9]>	
+		<script src="lib/html5shiv.js"></script>
+    <![endif]-->
+    
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="#main" class="text_hide fixed">본문 바로가기</a>
+        <!-- start of header -->
+        <header>
+            <nav class="header clear_fix">
+                <h1 id="logo"><a href="../pc.html" class="text_hide">모두의셔틀 로고</a></h1>
+                <div class="gnb_btn"><a href="#"><i class="fa fa-angle-left"></i></a></div>
+                <div class="util_wrapper clear_fix">
+                    <div class="notification">
+                        <a href="#">
+                            <div class="numbers">5</div>
+                            <div class="mail_box"></div>
+                        </a>
+                    </div>
+                    <div class="member_info clear_fix">
+                        <div class="member_photo text_hide">DA KIM님의 사진</div>                        
+                        <div class="member_id">DA KIM</div>
+                        <div class="member_out"><a href="#">로그아웃<i class="fa fa-sign-out"></i></a></div>
+                    </div>
+                    <div class="out_link">
+                        <a href="#">모두의셔틀 바로가기<i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- End of header -->
+
+        <nav class="gnb">
+            <ul>
+                <li><a href="#" class="clear_fix"><i class="fa fa-bar-chart"></i>대시보드<i class="fa fa-caret-down"></i></a>
+                    <ul class="sub_menu">
+                        <li><a href="#">일간</a></li>
+                        <li><a href="#">주간</a></li>
+                        <li><a href="#">월간</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="clear_fix"><i class="fa fa-user-circle-o"></i>회원관리<i class="fa fa-caret-down"></i></a>
+                    <ul class="sub_menu">
+                        <li><a href="#">전체회원</a></li>
+                        <li><a href="#">휴면회원</a></li>
+                        <li><a href="#">탈퇴회원</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="clear_fix"><i class="fa fa-credit-card-alt"></i>결제관리<i class="fa fa-caret-down"></i></a>
+                    <ul class="sub_menu">
+                        <li><a href="#">전체결제</a></li>
+                        <li><a href="#">결제취소</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="on clear_fix"><i class="fa fa-paint-brush"></i>디자인설정<i class="fa fa-caret-down"></i></a>
+                    <ul class="sub_menu">
+                        <li><a href="layout.html">레이아웃</a></li>
+                        <li><a href="button.html" class="on">버튼</a></li>
+                        <li><a href="form.html">폼</a></li>
+                        <li><a href="list_view.html">리스트뷰</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-cog"></i>설정</a></li>
+            </ul>
+        </nav>
+
+        <!-- Start of content -->
+        <main id="main">
+            <div class="main_wrapper">
+                <div class="layout column_1 clear_fix">
+                    <h3>태그별</h3>
+                    <a href="#" class="btn">button(a)</a>
+                    <button type="button" class="btn">button(button)</button>
+                    <input type="button" class="btn" value="button(input)">
+                </div>
+                <div class="layout column_1 clear_fix">
+                    <h3>크기별</h3>
+                    <a href="#" class="btn xsmall">x-small</a>
+                    <a href="#" class="btn small">small</a>
+                    <a href="#" class="btn medium">medium</a>
+                    <a href="#" class="btn large">large</a>
+                </div>
+                <div class="layout column_1 clear_fix">
+                    <h3>색깔별</h3>
+                    <a href="#" class="btn small">no-color</a>
+                    <a href="#" class="btn small paleblue">paleblue</a>
+                    <a href="#" class="btn small blue">blue</a>
+                    <a href="#" class="btn small palepurple">palepurple</a>
+                    <a href="#" class="btn small purple">purple</a>
+                    <a href="#" class="btn small yellow">yellow</a>
+                    <a href="#" class="btn small red">red</a>
+                    <a href="#" class="btn small black">black</a>
+                    <a href="#" class="btn small disabled">disabled</a>
+                </div>
+                <div class="layout column_1 clear_fix">
+                    <h3>정렬</h3>
+                    <div class="left">
+                        <a href="#" class="btn small">no-color</a>
+                        <a href="#" class="btn small paleblue">paleblue</a>
+                    </div>
+                    <div class="center">
+                        <a href="#" class="btn small blue">blue</a>
+                        <a href="#" class="btn small palepurple">palepurple</a>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="btn small purple">purple</a>
+                        <a href="#" class="btn small yellow">yellow</a>
+                    </div>
+                </div>
+                <div class="layout column_1 clear_fix">
+                    <h3>아이콘</h3>
+                    <div class="right">
+                        <a href="#" class="btn xsmall paleblue">
+                            <i class="fa fa-user"></i>Person
+                        </a>
+                        <a href="#" class="btn small palepurple">
+                            <i class="fa fa-caret-right"></i>Right arrow
+                        </a>
+                        <a href="#" class="btn medium purple bg_icon">
+                            <span><i class="fa fa-user"></i></span>Person
+                        </a>
+                        <a href="#" class="btn large yellow bg_icon">
+                            <span><i class="fa fa-caret-right"></i></span>Right arrow
+                        </a>
+                    </div>
+                    <div class="right">
+                        <a href="#" class="btn xsmall purple round"><i class="fa fa-user"></i></a>
+                        <a href="#" class="btn small yellow round"><i class="fa fa-caret-right"></i></a>
+                        <a href="#" class="btn small red rec"><i class="fa fa-folder-open"></i></a>
+                        <a href="#" class="btn medium black rec"><i class="fa fa-folder-open"></i></a>
+                    </div>
+                </div>                
+            </div>
+        </main>
+        <!-- End of content -->
+
+        <!-- Start of footer -->
+        <footer>
+            <p>모두의셔틀 관리자페이지</p>
+            <p>본 페이지는 포트폴리오용으로 제작되었습니다.</p>
+        </footer>
+        <!-- End of footer -->
+    </div>
+</body>
+
+</html>
