@@ -98,10 +98,180 @@
                             <label for="name_search">이름</label>
                             <input type="text" name="name_search" id="name_search">
                         </li>
+                        <li>
+                            <label for="class_search">회원구분</label>
+                            <select name="class_search" id="class_search">
+                                <option value="normal">일반회원</option>
+                                <option value="shuttle">기사회원</option>
+                            </select>
+                        </li>
+                        <li class="half">
+                            <label for="date_search">가입일자</label>
+                            <input type="date" name="date_search" id="date_search"> ~
+                            <input type="date" name="date_search2" id="date_search2">
+                        </li>
+                        <li class="half">
+                            <label for="use_search">이용일자</label>
+                            <input type="date" name="use_search" id="use_search"> ~
+                            <input type="date" name="use_search2" id="use_search2">
+                        </li>
                     </ul>
+                    <div class="center">
+                        <a href="#" class="btn medium">전체보기</a>
+                        <a href="#" class="btn medium blue">검색하기</a>
+                    </div>
                 </div>
                 <div class="layout column_1 clear_fix">
                     <h3>회원정보 목록</h3>
+                    <p class="list_info">
+                        전체 <em>1289</em>건 [<em>2</em>/30 페이지]
+                    </p>
+                    <table class="list">
+                        <caption class="text_hide">회원정보목록</caption>
+                        <colgroup>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>번호</th>
+                                <th>아이디</th>
+                                <th>이름</th>
+                                <th>사진</th>
+                                <th>이메일</th>
+                                <th>회원구분</th>
+                                <th>가입일</th>
+                                <th>상태</th>
+                                <th>관리</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>32</td>
+                                <td><a href="#">dadati12</a></td>
+                                <td><a href="#">김다다</a></td>
+                                <td>
+                                    <div class="image">
+                                        <img src="../img/html/sample_image.jpg" alt="김다다">
+                                    </div>
+                                </td>
+                                <td>dadati@gmail.com</td>
+                                <td>일반회원</td>
+                                <td>2018-06-05</td>
+                                <td>정상</td>
+                                <td>
+                                    <a href="#" class="btn small rec red del text_hide">삭제하기</a>
+                                    <a href="#" class="btn small rec black edit text_hide">수정하기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>33</td>
+                                <td><a href="#">jiyoung2415</a></td>
+                                <td><a href="#">김지영</a></td>
+                                <td>
+                                    <div class="image">
+                                    </div>
+                                </td>
+                                <td>jiyoung2415@gmail.com</td>
+                                <td>일반회원</td>
+                                <td>2018-06-06</td>
+                                <td>탈퇴</td>
+                                <td>
+                                    <a href="#" class="btn small rec disabled text_hide">삭제하기</a>
+                                    <a href="#" class="btn small rec black edit text_hide">수정하기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>34</td>
+                                <td><a href="#">jihye552</a></td>
+                                <td><a href="#">이지혜</a></td>
+                                <td>
+                                    <div class="image">
+                                        <img src="http://placekitten.com/200/120" alt="이지혜">
+                                    </div>
+                                </td>
+                                <td>jihye552@gmail.com</td>
+                                <td>기사회원</td>
+                                <td>2018-06-07</td>
+                                <td>정상</td>
+                                <td>
+                                    <a href="#" class="btn small rec red del text_hide">삭제하기</a>
+                                    <a href="#" class="btn small rec black edit text_hide">수정하기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>35</td>
+                                <td><a href="#">suzy1144</a></td>
+                                <td><a href="#">강수지</a></td>
+                                <td>
+                                    <div class="image">
+                                        <img src="http://placekitten.com/180/150" alt="강수지">
+                                    </div>
+                                </td>
+                                <td>suzy1144@gmail.com</td>
+                                <td>일반회원</td>
+                                <td>2018-06-08</td>
+                                <td>정상</td>
+                                <td>
+                                    <a href="#" class="btn small rec red del text_hide">삭제하기</a>
+                                    <a href="#" class="btn small rec black edit text_hide">수정하기</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>36</td>
+                                <td><a href="#">dpwnsdl14</a></td>
+                                <td><a href="#">이예준</a></td>
+                                <td>
+                                    <div class="image">
+                                        <img src="http://placekitten.com/320/310" alt="이예준">
+                                    </div>
+                                </td>
+                                <td>dpwnsdl14@gmail.com</td>
+                                <td>일반회원</td>
+                                <td>2018-06-09</td>
+                                <td>정상</td>
+                                <td>
+                                    <a href="#" class="btn small rec red del text_hide">삭제하기</a>
+                                    <a href="#" class="btn small rec black edit text_hide">수정하기</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pagination center">
+                        <div class="pagination_wrapper">
+                            <a href="#" class="btn double_left small rec disabled">
+                                <i class="fa fa-angle-double-left"></i>
+                            </a>
+                            <a href="#" class="btn single_left small rec disabled">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <ol>
+                                <li><a href="#" class="btn small rec">1</a></li>
+                                <li><a href="#" class="btn small rec">2</a></li>
+                                <li><a href="#" class="btn small rec on">3</a></li>
+                                <li><a href="#" class="btn small rec">4</a></li>
+                                <li><a href="#" class="btn small rec">5</a></li>
+                                <li><a href="#" class="btn small rec">6</a></li>
+                                <li><a href="#" class="btn small rec">7</a></li>
+                                <li><a href="#" class="btn small rec">8</a></li>
+                                <li><a href="#" class="btn small rec">9</a></li>
+                                <li><a href="#" class="btn small rec">10</a></li>
+                            </ol>
+                            <a href="#" class="btn single_right small rec">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                            <a href="#" class="btn double_right small rec">
+                                <i class="fa fa-angle-double-right"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>

@@ -102,7 +102,7 @@ header{position:fixed;top:0px;left:0px;width:100%;height:70px;}
 .column_3:nth-child(2), .column_3:nth-child(3){margin-left:2%;}
 
 /* button */
-.btn{position:relative;display:inline-block;min-width:100px;height:30px;font-size:14px;line-height:28px;vertical-align:middle;box-sizing:border-box;text-align:center;white-space:nowrap;margin:0px;padding:0px 5px;cursor:pointer;overflow:hidden;border:1px solid #dddddd;background:#ffffff;}
+.btn{position:relative;display:inline-block;min-width:100px;height:30px;font-size:14px;font-weight:700;line-height:28px;vertical-align:middle;box-sizing:border-box;text-align:center;white-space:nowrap;margin:0px;padding:0px 5px;cursor:pointer;overflow:hidden;border:1px solid #dddddd;background:#ffffff;}
 .btn:active{box-shadow:2px 1px 2px 1px rgba(0,0,0,0.2) inset;}
 .left{text-align:left;}
 .right{text-align:right;}
@@ -124,12 +124,12 @@ header{position:fixed;top:0px;left:0px;width:100%;height:70px;}
 .btn.bg_icon span{display:block;position:absolute;top:0px;left:0px;width:30px;background:rgba(255,255,255,0.4);}
 .btn.bg_icon span i{margin:0px;text-align:center;}
 .btn.round{border-radius:50%;}
-.btn.round i{margin:0px;}
-.btn.xsmall.round{min-width:20px;width:20px;height:20px;line-height:20px;font-size:11px;}
-.btn.small.round{min-width:40px;width:40px;height:40px;line-height:40px;font-size:18px;}
-.btn.medium.round{min-width:80px;width:80px;height:80px;line-height:80px;font-size:22px;}
-.btn.large.round{min-width:110px;width:110px;height:110px;line-height:110px;font-size:28px;}
 .btn.rec{border-radius:5px;}
+.btn.round i, .btn.rec i{margin:0px;}
+.btn.xsmall.round, .btn.xsmall.rec{min-width:20px;width:20px;height:20px;line-height:20px;font-size:11px;}
+.btn.small.round, .btn.small.rec{min-width:40px;width:40px;height:40px;line-height:40px;font-size:18px;}
+.btn.medium.round, .btn.medium.rec{min-width:80px;width:80px;height:80px;line-height:80px;font-size:22px;}
+.btn.large.round, .btn.large.rec{min-width:110px;width:110px;height:110px;line-height:110px;font-size:28px;}
 
 /* form */
 .form{width:100%;font-size:14px;font-weight:700;}
@@ -163,3 +163,28 @@ header{position:fixed;top:0px;left:0px;width:100%;height:70px;}
 .form .file_wrapper span{position:absolute;top:6px;right:10px;width:50px;height:16px;font-size:12px;line-height:16px;color:#ffffff;background:#4447b2;text-align:center;}
 .form .file_wrapper a:hover{color:#4447b2;}
 .form .file_wrapper .del{position:absolute;top:4px;right:70px;width:20px;height:20px;background:url(../img/common/del.png) no-repeat center center;background-size:contain;}
+
+/* list_view */
+.list_search{width:100%;height:100px;}
+.list_search>li{width:32%;margin-left:2%;margin-bottom:10px;float:left;}
+.list_search>li:nth-child(1){margin-left:0px;}
+.list_search>li:last-child{margin-right:0px;}
+.list_search .half{width:49%;margin-left:0px;margin-right:2%;float:left;}
+.list_search li label{display:inline-block;min-width:100px;height:30px;font-size:14px;line-height:28px;color:#ffffff;font-weight:700;text-align:center;vertical-align:middle;margin-right:10px;background:#6077e7;}
+.list_search li input[type="text"], .list_search li input[type="date"], .list_search li select{width:200px;height:30px;font-family:'Noto Sans KR',sans-serif;font-size:14px;font-weight:700;line-height:28px;border:1px solid #888888;padding:0px 10px;}
+.list_info{font-size:14px;font-weight:700;line-height:26px;}
+.list_info em{color:#e60c0c;}
+.list td .image{max-width:130px;height:80px;overflow:hidden;margin:auto;}
+.list td .image img{height:100%;}
+.list td .btn.rec{display:inline-block;}
+.list td .btn.rec.del{background:url(../img/common/del.png) no-repeat center center;background-color:#ffeaea;}
+.list td .btn.rec.disabled{background:url(../img/common/del.png) no-repeat center center;opacity:0.3;}
+.list td .btn.rec.edit{background:url(../img/common/edit.png) no-repeat center center;background-color:#404040;}
+.pagination{margin-top:20px;}
+.pagination i{vertical-align:2px;}
+.pagination ol{display:inline-block;}
+.pagination ol li{display:inline-block;}
+.pagination ol li a{border:none;}
+.pagination ol li a:hover{background:#d5f6ff;}
+.pagination ol li a.on{color:#ffffff;font-weight:700;background:#4447b2;}
+.pagination ol li a.on:hover{background:#4447b2;}
