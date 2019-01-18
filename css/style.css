@@ -22,12 +22,12 @@ footer p{font-size:12px;color:#888888;text-align:center;}
 #login{position:absolute;top:0px;left:0px;width:100vw;height:100vh;background:#6077e7;z-index:90;}
 #login .login_info{width:100vw;height:45vh;background:#ffffff;position:relative;}
 #login .login_info img{width:initial;max-width:initial;position:absolute;}
-#login .login_info img:nth-child(1){top:20vw;left:50%;margin-left:-96px;}
+#login .login_info img:nth-child(1){bottom:160px;left:50%;margin-left:-96px;}
 #login .login_info img:nth-child(2){bottom:0px;left:50%;margin-left:-130px;}
 #login .login_wrapper{width:100vw;height:55vh;background:#6077e7;}
 #login input, #login button{display:block;border:none;background:none;margin:0px;padding:0px;font-family:'Noto Sans KR',sans-serif;}
 #login input::placeholder{color:rgba(255,255,255,0.7);}
-#login .login_form{width:76vw;height:30vh;margin:auto;padding-top:5vh;box-sizing:border-box;}
+#login .login_form{width:380px;height:30vh;margin:auto;padding-top:5vh;box-sizing:border-box;}
 #login .login_form label{display:block;width:15%;height:7vh;min-width:20px;border-bottom:1px solid #ffffff;float:left;}
 #login .login_form label:nth-child(1){background:url(../img/common/id_bg.jpg) no-repeat center center;}
 #login .login_form label:nth-child(3){background:url(../img/common/pw_bg.jpg) no-repeat center center;margin-bottom:4vh;}
