@@ -52,6 +52,49 @@ $(function(){
     $('.bus_second').text(second);
     $('.bus_stop_number').text(bus_stop);
 });
+//모바일 스와이프 동작
+$(function() {;
+    var lastX = 50;
+    var minOffsetLeft = -160;
+    var moveDistance = 20;
+    var offsetLeft = 0;
+    var left = 0;
+    $('.lines_wrapper>div').eq(0).removeClass('off');
+    $('.lines_wrapper').bind('touchmove', function (e){
+        var currentX = e.originalEvent.touches[0].pageX;
+        if(currentX > lastX){
+            if(offsetLeft === 0){
+                $('.lines_wrapper').stop().animate({'left': offsetLeft + 'px'}, 500);
+            }else{
+                offsetLeft += moveDistance;
+                if(offsetLeft > 0) offsetLeft = 0;
+                $('.lines_wrapper').stop().animate({'left': offsetLeft + 'px'}, 500);
+            }
+        }else if(currentX < lastX){
+            if(offsetLeft === minOffsetLeft){
+                offsetLeft = 0;
+                $('.lines_wrapper').stop().animate({'left': offsetLeft + 'px'}, 500);
+            }else{
+                offsetLeft -= moveDistance;
+                if(offsetLeft < minOffsetLeft) offsetLeft = minOffsetLeft;
+                $('.lines_wrapper').stop().animate({'left': offsetLeft + 'px'}, 500);
+            }
+        }
+        lastX = currentX;
+        left = -(offsetLeft);
+        console.log(offsetLeft + '/' + left);
+        if(left > 150){
+            $('.lines_wrapper>div').addClass('off');
+            $('.lines_wrapper>div').eq(2).removeClass('off');           
+        }else if(left > 60 && left < 150){
+            $('.lines_wrapper>div').addClass('off');
+            $('.lines_wrapper>div').eq(1).removeClass('off');            
+        }else{
+            $('.lines_wrapper>div').addClass('off');
+            $('.lines_wrapper>div').eq(0).removeClass('off');            
+        }
+    });
+});
 //모바일 탭 동작
 $(function(){
     $('.mode_wrapper a').on('click', function(){
