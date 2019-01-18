@@ -17,6 +17,19 @@ $(function(){
         $(location).attr('href', 'https://ppomi.github.io/modu/mobile.html');
     });
 });
+//모바일 스와이프 동작
+$(function() {
+    var lastX;
+    $('.main_scroll>div').bind('touchmove', function (e){
+        var currentX = e.originalEvent.touches[0].pageX;
+        if(currentX > lastX){
+            $('.present_site_wrapper').stop().animate({'margin-left': '0px'}, 500);
+        }else if(currentX < lastX){
+            $('.present_site_wrapper').stop().animate({'margin-left': '-80vw'}, 500);
+        }
+        lastX = currentX;
+    });
+});
 //모바일 사이드 내비 동작
 $(function(){
     $('.menu_btn').on('click', function(){
