@@ -16,6 +16,10 @@ $(function(){
         e.preventDefault();
         $(location).attr('href', 'https://ppomi.github.io/modu/mobile.html');
     });
+    $('#admin_start').on('click', function(e){
+        e.preventDefault();
+        $(location).attr('href', 'https://ppomi.github.io/modu/pc.html');
+    });
 });
 //모바일 스와이프 동작
 $(function() {
