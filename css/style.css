@@ -67,7 +67,7 @@ header{position:fixed;top:0px;left:0px;width:100%;height:70px;z-index:1000;}
 .gnb .sub_menu{width:100%;display:none;}
 .gnb>ul>li>a.on~.sub_menu{display:block;}
 .gnb .sub_menu li a{padding:0px 40px;box-sizing:border-box;font-size:14px;font-weight:700;}
-.gnb .sub_menu li a.on, .gnb .sub_menu li a:hover{background:#dddddd;}
+.gnb .sub_menu li a.on, .gnb .sub_menu li a:hover{color:#6077e7;background:#ffffff;}
 
 /* main */
 .dash_chart{width:60%;height:100%;float:left;}
