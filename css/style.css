@@ -15,8 +15,6 @@ div h3{font-size:20px;line-height:30px;margin-bottom:20px;font-weight:700;}
 .main_wrapper>.column_1{margin-top:0px;}
 footer{position:absolute;bottom:0px;left:0px;width:100%;padding:20px 0px;padding-left:230px;background:#fefefe;box-sizing:border-box;transition:padding-left 0.3s;}
 footer p{font-size:12px;color:#888888;text-align:center;}
-#skip.fixed{position:fixed;top:-41px;left:0px;width:100%;font-size:16px;color:#ffffff;line-height:40px;text-align:center;background:rgba(0, 0, 0, 0.6);border-bottom:1px solid #ffffff;z-index:10000;transition:top 0.3s;}
-#skip.fixed:focus{top:0px;}
 
 /* index */
 #login{position:absolute;top:0px;left:0px;width:100vw;height:100vh;background:#6077e7;z-index:90;}

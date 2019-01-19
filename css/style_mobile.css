@@ -37,6 +37,7 @@ header .gnb .nav_wrapper .menus li:nth-child(4) a::before{content:url(../img/com
 header .gnb .nav_wrapper .menus li:nth-child(5) a::before{content:url(../img/common/menu_icon_05.jpg);}
 header .gnb .nav_wrapper .menus li:nth-child(6) a::before{content:url(../img/common/menu_icon_06.jpg);}
 header .gnb .nav_wrapper .menus li:nth-child(7) a::before{content:url(../img/common/menu_icon_07.jpg);}
+footer{position:absolute;bottom:0px;left:0px;width:250px;height:6vh;font-size:1vh;line-height:2vh;text-align:center;color:#93a1bb;}
 
 /* index */
 
