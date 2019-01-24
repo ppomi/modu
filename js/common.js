@@ -43,6 +43,12 @@ $(function(){
         });
     });
 });
+//모바일 새로고침
+$(function(){
+    $('.refresh_btn a').on('click', function(){
+        location.reload();
+    });
+});
 //모바일 랜덤 숫자
 $(function(){
     function numRandom(min, max){
