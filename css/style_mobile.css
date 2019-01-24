@@ -116,6 +116,7 @@ main{width:100vw;height:calc(100vh - 50px);margin-top:50px;overflow:hidden;posit
 .present_wrapper .bus_stop_lines .time li{width:100%;text-align:center;font-size:1vh;}
 .present_wrapper .bus_stop_lines .time li:first-child, .present_wrapper .bus_stop_lines .time li:last-child{font-size:1.5vh;font-weight:700;}
 .present_wrapper .bus_stop_lines .dart{width:18vw;position:relative;}
+.present_wrapper .bus_stop_lines .dart::before{content:'';position:absolute;top:5vh;left:2vw;width:6vw;height:5vh;background: url(../img/common/dart.png) no-repeat center center;background-size:80%;z-index:100;}
 .present_wrapper .bus_stop_lines .dart li::after{content:'';position:absolute;left:4vw;width:2vw;height:5vh;background: url(../img/common/circle.png) no-repeat center center;background-color:#67cecd;background-size:80%;}
 .present_wrapper .bus_stop_lines .dart li:first-child::after{content:'출발';font-size:1vh;color:#ffffff;background:none;width:8vw;height:8vw;margin-left:-3vw;line-height:8vw;text-align:center;text-indent:initial;}
 .present_wrapper .bus_stop_lines .dart li:last-child::after{content:'도착';font-size:1vh;color:#ffffff;background:none;width:8vw;height:8vw;margin-left:-3vw;line-height:8vw;text-align:center;text-indent:initial;}
