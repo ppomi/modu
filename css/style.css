@@ -8,7 +8,7 @@ html{font-family:'Noto Sans KR',sans-serif;color:#222222;
     /* Support for all WebKit browsers. */-webkit-font-smoothing:antialiased;
     /* Support for Safari and Chrome. */text-rendering:optimizeLegibility;
     /* Support for Firefox. */-moz-osx-font-smoothing:grayscale;}
-#main{padding:70px 0px 0px 230px;transition:padding 0.3s;}
+#main{display:block;padding:70px 0px 0px 230px;transition:padding 0.3s;}
 #main.wide{padding-left:0px;}
 div h3{font-size:20px;line-height:30px;margin-bottom:20px;font-weight:700;}
 .main_wrapper{padding:20px;padding-bottom:90px;}
