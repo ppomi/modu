@@ -63,48 +63,81 @@ $(function(){
     $('.bus_stop_number').text(bus_stop);
 });
 //모바일 스와이프 동작
-$(function() {;
-    var lastX = 50;
-    var minOffsetLeft = -160;
-    var moveDistance = 20;
-    var offsetLeft = 0;
-    var left = 0;
-    $('.lines_wrapper>div').eq(0).removeClass('off');
-    $('.lines_wrapper').bind('touchmove', function (e){
-        var currentX = e.originalEvent.touches[0].pageX;
-        if(currentX > lastX){
-            if(offsetLeft === 0){
-                $('.lines_wrapper').stop().animate({'left': offsetLeft + 'px'}, 500);
-            }else{
-                offsetLeft += moveDistance;
-                if(offsetLeft > 0) offsetLeft = 0;
-                $('.lines_wrapper').stop().animate({'left': offsetLeft + 'px'}, 500);
+function setImageSwipe(selector, first) {
+    var numSlide = $(selector).find('ul.slide li').length;
+    var slideNow = 0;
+    var slidePrev = 0;
+    var slideNext = 0;
+    var slideFirst = first;
+    var startX = 0;
+    var startY = 0;
+    var delX = 0;
+    var delY = 0;
+    var offsetX = 0;
+    var isDraggable = false;
+    var direction = '';
+
+    $(selector).find('ul.slide li').each(function(i) {
+        $(this).css({'left': (i * 100) + '%', 'display': 'block'});
+    });
+    showSlide(1);    
+    $(selector).find('ul.slide').on('touchstart', function(e) {
+        isDraggable = true;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        offsetX = $(this).position().left;
+    });    
+    document.addEventListener('touchmove', function(e) {
+        if (isDraggable === false) return false;
+        delX = e.touches[0].clientX - startX;
+        delY = e.touches[0].clientY - startY;
+        console.log(direction);
+        if (direction === '') {
+            if ((Math.abs(delX) > 5) && (Math.abs(delX) > Math.abs(delY))) {
+                direction = 'horizon';
+            } else if ((Math.abs(delY) > 5) && (Math.abs(delX) < Math.abs(delY))) {
+                direction = 'vertical';
+            } else {
+                direction = '';
             }
-        }else if(currentX < lastX){
-            if(offsetLeft === minOffsetLeft){
-                offsetLeft = 0;
-                $('.lines_wrapper').stop().animate({'left': offsetLeft + 'px'}, 500);
-            }else{
-                offsetLeft -= moveDistance;
-                if(offsetLeft < minOffsetLeft) offsetLeft = minOffsetLeft;
-                $('.lines_wrapper').stop().animate({'left': offsetLeft + 'px'}, 500);
+        } else if (direction === 'horizon') {
+            e.preventDefault();
+            if ((delX > 0 && slideNow === 1) || (delX < 0 && slideNow === numSlide)) {
+                delX = delX / 10;
             }
+            $(selector).find('ul.slide').css({'left': (offsetX + delX) + 'px'});
+        } else if (direction === 'vertical') {
+            delX = 0;
         }
-        lastX = currentX;
-        left = -(offsetLeft);
-        console.log(offsetLeft + '/' + left);
-        if(left > 150){
-            $('.lines_wrapper>div').addClass('off');
-            $('.lines_wrapper>div').eq(2).removeClass('off');           
-        }else if(left > 60 && left < 150){
-            $('.lines_wrapper>div').addClass('off');
-            $('.lines_wrapper>div').eq(1).removeClass('off');            
-        }else{
-            $('.lines_wrapper>div').addClass('off');
-            $('.lines_wrapper>div').eq(0).removeClass('off');            
+    }, {passive: false});
+    
+    $(document).on('touchend', function() {
+        if (isDraggable === true) {
+            if (delX < -50 && slideNow !== numSlide) {
+                showSlide(slideNext);
+            } else if (delX > 50 && slideNow !== 1) {
+                showSlide(slidePrev);
+            } else {
+                showSlide(slideNow);
+            }
+            isDraggable = false;
+            direction = '';
         }
     });
-});
+
+    function showSlide(n) {
+        if (slideNow === 0) {
+            $(selector).find('ul.slide').css({'transition': 'none', 'left': -((n - 1) * 100) + '%'});
+        } else {
+            $(selector).find('ul.slide').css({'transition': 'left 0.5s', 'left': -((n - 1) * 100) + '%'});
+        }
+        $(selector).find('li .line_card').removeClass('on');
+        $(selector).find('li:eq(' + (n - 1) + ') .line_card').addClass('on');
+        slideNow = n;
+        slidePrev = (n - 1) < 1 ? numSlide : n - 1;
+        slideNext = (n + 1) > numSlide ? 1 : n + 1;
+    }
+}
 //모바일 탭 동작
 $(function(){
     $('.mode_wrapper a').on('click', function(){

@@ -12,7 +12,7 @@
     <link href="../css/style_mobile.css" rel="stylesheet">
     <link href="../lib/fontawesome/css/font-awesome.min.css" rel="stylesheet">
 
-    <script src="../lib/jquery-1.12.4.min.js"></script>
+    <script src="../lib/jquery-3.3.1.min.js"></script>
     <script src="../lib/prefixfree.min.js"></script>
     <script src="../js/common.js"></script>
 
@@ -62,83 +62,91 @@
 
     <!-- Start of content -->
     <main id="main" class="road_wrapper">
-        <div class="main_scroll">
-            <div class="mode_wrapper clear_fix">
-                <a href="#" class="on">전체노선</a>
-                <a href="#">운영중</a>
-                <a href="#">모집중</a>
-            </div>
-            <div class="lines_wrapper">
-                <div class="line_card off">
-                    <div class="card_top clear_fix">
-                        <p class="line_name">일산-상암</p><a href="#" class="mind text_hide">찜하기</a>
-                        <p class="line_time">9 : 07 도착</p>
-                    </div>
-                    <div class="card_content">
-                        <div class="card_bg"></div>
-                        <div class="card_price">
-                            운행 <span>67,000~</span>
-                        </div>
-                        <div class="card_info">
-                            <p><span class="distance">29.6km</span> 잔여좌석<span>8</span>석</p>
-                            <div class="stars">
-                                <span class="on text_hide">1점</span>
-                                <span class="on text_hide">2점</span>
-                                <span class="on text_hide">3점</span>
-                                <span class="on text_hide">4점</span>
-                                <span class="on text_hide">5점</span>
+        <div class="mode_wrapper clear_fix">
+            <a href="#" class="on">전체노선</a>
+            <a href="#">운영중</a>
+            <a href="#">모집중</a>
+        </div>
+        <div class="lines_wrapper" id="road_visual">
+            <div class="box">
+                <ul class="slide">
+                    <li>
+                        <div class="line_card">
+                            <div class="card_top clear_fix">
+                                <p class="line_name">일산-상암</p><a href="#" class="mind text_hide">찜하기</a>
+                                <p class="line_time">9 : 07 도착</p>
+                            </div>
+                            <div class="card_content">
+                                <div class="card_bg"></div>
+                                <div class="card_price">
+                                    운행 <span>67,000~</span>
+                                </div>
+                                <div class="card_info">
+                                    <p><span class="distance">29.6km</span> 잔여좌석<span>8</span>석</p>
+                                    <div class="stars">
+                                        <span class="on text_hide">1점</span>
+                                        <span class="on text_hide">2점</span>
+                                        <span class="on text_hide">3점</span>
+                                        <span class="on text_hide">4점</span>
+                                        <span class="on text_hide">5점</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="line_card off">
-                    <div class="card_top clear_fix">
-                        <p class="line_name">위례-여의도</p><a href="#" class="mind text_hide">찜하기</a>
-                        <p class="line_time">9 : 10 도착</p>
-                    </div>
-                    <div class="card_content">
-                        <div class="card_bg"></div>
-                        <div class="card_price">
-                            운행 <span>85,000~</span>
-                        </div>
-                        <div class="card_info">
-                            <p><span class="distance">39.1km</span> 잔여좌석<span>12</span>석</p>
-                            <div class="stars">
-                                <span class="on text_hide">1점</span>
-                                <span class="on text_hide">2점</span>
-                                <span class="on text_hide">3점</span>
-                                <span class="on text_hide">4점</span>
-                                <span class="text_hide">5점</span>
+                    </li>
+                    <li>
+                        <div class="line_card">
+                            <div class="card_top clear_fix">
+                                <p class="line_name">위례-여의도</p><a href="#" class="mind text_hide">찜하기</a>
+                                <p class="line_time">9 : 10 도착</p>
+                            </div>
+                            <div class="card_content">
+                                <div class="card_bg"></div>
+                                <div class="card_price">
+                                    운행 <span>85,000~</span>
+                                </div>
+                                <div class="card_info">
+                                    <p><span class="distance">39.1km</span> 잔여좌석<span>12</span>석</p>
+                                    <div class="stars">
+                                        <span class="on text_hide">1점</span>
+                                        <span class="on text_hide">2점</span>
+                                        <span class="on text_hide">3점</span>
+                                        <span class="on text_hide">4점</span>
+                                        <span class="text_hide">5점</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="line_card off">
-                    <div class="card_top clear_fix">
-                        <p class="line_name">분당-강남</p><a href="#" class="mind text_hide">찜하기</a>
-                        <p class="line_time">9 : 14 도착</p>
-                    </div>
-                    <div class="card_content">
-                        <div class="card_bg"></div>
-                        <div class="card_price">
-                            운행 <span>58,000~</span>
-                        </div>
-                        <div class="card_info">
-                            <p><span class="distance">19.1km</span> 잔여좌석<span>10</span>석</p>
-                            <div class="stars">
-                                <span class="on text_hide">1점</span>
-                                <span class="on text_hide">2점</span>
-                                <span class="on text_hide">3점</span>
-                                <span class="on text_hide">4점</span>
-                                <span class="text_hide">5점</span>
+                    </li>
+                    <li>
+                        <div class="line_card">
+                            <div class="card_top clear_fix">
+                                <p class="line_name">분당-강남</p><a href="#" class="mind text_hide">찜하기</a>
+                                <p class="line_time">9 : 14 도착</p>
+                            </div>
+                            <div class="card_content">
+                                <div class="card_bg"></div>
+                                <div class="card_price">
+                                    운행 <span>58,000~</span>
+                                </div>
+                                <div class="card_info">
+                                    <p><span class="distance">19.1km</span> 잔여좌석<span>10</span>석</p>
+                                    <div class="stars">
+                                        <span class="on text_hide">1점</span>
+                                        <span class="on text_hide">2점</span>
+                                        <span class="on text_hide">3점</span>
+                                        <span class="on text_hide">4점</span>
+                                        <span class="text_hide">5점</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
-            <div class="search_btn">
-                <a href="#" class="text_hide">검색하기</a>
-            </div>
+        </div>
+        <div class="search_btn">
+            <a href="#" class="text_hide">검색하기</a>
         </div>
     </main>
     <!-- End of content -->
@@ -149,5 +157,7 @@
     </footer>
     <!-- End of footer -->
 </body>
-
+<script>
+    setImageSwipe('#road_visual', 1);
+</script>
 </html>
