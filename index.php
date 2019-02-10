@@ -14,14 +14,9 @@ if(isMobile()){
         <title>모두의셔틀</title>
         <link href="css/style_mobile.css" rel="stylesheet">
 
-        <script src="lib/jquery-1.12.4.min.js"></script>
+        <script src="lib/jquery-3.3.1.min.js"></script>
         <script src="lib/prefixfree.min.js"></script>
         <script src="js/common.js"></script>
-
-        <!--[if lt IE 9]>	
-            <script src="lib/html5shiv.js"></script>
-        <![endif]-->
-        
     </head>
 
     <body>
@@ -45,7 +40,7 @@ if(isMobile()){
         </div>
         <div class="login_wrapper">
             <div class="login_form">
-                <form action="get" class="clear_fix">
+                <form action="get" class="clear_fix" autocomplete="off">
                     <label for="id" class="text_hide">아이디(메일주소)</label>
                     <input type="text" name="id" id="id" placeholder="username@mail.com">
                     <label for="password" class="text_hide">비밀번호</label>
@@ -81,14 +76,9 @@ if(isMobile()){
         <title>모두의셔틀 관리자페이지</title>
         <link href="css/style.css" rel="stylesheet">
 
-        <script src="lib/jquery-1.12.4.min.js"></script>
+        <script src="lib/jquery-3.3.1.min.js"></script>
         <script src="lib/prefixfree.min.js"></script>
         <script src="js/common.js"></script>
-
-        <!--[if lt IE 9]>	
-            <script src="lib/html5shiv.js"></script>
-        <![endif]-->
-        
     </head>
 
     <body>
@@ -100,7 +90,7 @@ if(isMobile()){
         </div>
         <div class="login_wrapper">
             <div class="login_form">
-                <form action="get" class="clear_fix">
+                <form action="get" class="clear_fix" autocomplete="off">
                     <label for="id" class="text_hide">아이디</label>
                     <input type="text" name="id" id="id" placeholder="아이디를 입력하세요">
                     <label for="password" class="text_hide">비밀번호</label>
