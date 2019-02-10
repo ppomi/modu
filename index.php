@@ -34,10 +34,7 @@ if(isMobile()){
 
     <!-- Start of Login -->
     <div id="login">
-        <div class="login_info">
-            <img src="img/common/login_text.jpg" alt="꿀잠 출근라이프로 여러분을 모셔드립니다!">
-            <img src="img/common/login_car.jpg" alt="모두의 셔틀">
-        </div>
+        <div class="login_info"></div>
         <div class="login_wrapper">
             <div class="login_form">
                 <form action="get" class="clear_fix" autocomplete="off">
