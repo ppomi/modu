@@ -15,7 +15,6 @@ if(isMobile()){
         <link href="css/style_mobile.css" rel="stylesheet">
 
         <script src="lib/jquery-3.3.1.min.js"></script>
-        <script src="lib/prefixfree.min.js"></script>
         <script src="js/common.js"></script>
     </head>
 
@@ -74,7 +73,6 @@ if(isMobile()){
         <link href="css/style.css" rel="stylesheet">
 
         <script src="lib/jquery-3.3.1.min.js"></script>
-        <script src="lib/prefixfree.min.js"></script>
         <script src="js/common.js"></script>
     </head>
 
