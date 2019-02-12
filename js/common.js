@@ -37,9 +37,16 @@ $(function() {
 //모바일 사이드 내비 동작
 $(function(){
     $('.menu_btn').on('click', function(){
-        $('.nav_wrapper').animate({'left': '0px'}, 300).addClass('on');
+        $('.fold a').trigger('focus');
+        $('.nav_wrapper').animate({'left': '0px'}, 300).addClass('on');        
+        $('.nav_wrapper').append('<a href="#" class="return"></a>');
+        $('.return').on('focus', function() {
+            $('.fold a').trigger('focus');
+        });
         $('.fold a').on('click', function(){
             $('.nav_wrapper').animate({'left': '-200vw'}, 300).removeClass('on');
+            $('.nav_wrapper .return').remove();
+            $('.noti_btn a').trigger('focus');
         });
     });
 });
